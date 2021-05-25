@@ -10,8 +10,8 @@
 #region Usings
 
 using Letterxpress.EndPoints;
+using Letterxpress.REST;
 using Letterxpress.REST.Custom;
-using Library.REST;
 
 #endregion
 
@@ -25,7 +25,7 @@ namespace Letterxpress
         internal ApiHttpClient HttpClient { get; private set; }
         public Pricing Pricing { get; private set; }
 
-        public void Init(string username, string api, bool useSandbox)
+        public Library(string username, string api, bool useSandbox)
         {
             Instance = this;
             Sandbox = useSandbox;
