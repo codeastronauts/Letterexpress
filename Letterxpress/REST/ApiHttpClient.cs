@@ -10,12 +10,14 @@
 #region Usings
 
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 #endregion
 
@@ -58,6 +60,13 @@ namespace Letterxpress.REST
                     result = streamResult.ReadToEnd();
                     //result = responseTask.Result;
                 });
+
+            dynamic data = JObject.Parse(result);
+
+            if (data.status != 200)
+            {
+                throw new WebException(data.message?.ToString());
+            }
 
             return result;
         }
