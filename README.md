@@ -21,17 +21,16 @@ The usage is simple. Here is an example of how your balance is displayed.
 | getBalance | ✅           |
 | getJobs/queue | ❌           |
 | getJobs/sent | ❌           |
-| getJobs/deleted | ❌           |
+| getJobs/deleted | ✅           |
 | getJobs/queue/(int)days | ❌           |
 | getJobs/sent/(int)days | ❌           |
-| getJobs/deleted/(int)days | ❌           |
+| getJobs/deleted/(int)days | ✅           |
 | getJobs/hold | ❌           |
-| getJobs/timer | ❌           |
-| getJob/(int)id | ❌           |
-| setJob | ❌           |
+| getJobs/timer | ✅           |
+| getJob/(int)id | ✅           |
+| setJob | ✅           |
 | updateJob/(int)id | ❌           |
-| deleteJob/(int)id | ❌           |
+| deleteJob/(int)id | ✅           |
 | listInvoices | ❌           |
 | getInvoice | ❌           |
 | getInvoice/(int)id | ❌           |
-
